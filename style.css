@@ -21,7 +21,7 @@
 
 @media (max-width: 375px) {
     body {
-        width: 375px;
+        width: 100%;
         display: flex;
         justify-content: center;
         padding-top: 30px;
@@ -29,7 +29,7 @@
         background-color: var(--light-green);
     }
     section {
-        width: 330px;
+        width: 90%;
         height: fit-content;
         display: flex;
         flex-direction: column;

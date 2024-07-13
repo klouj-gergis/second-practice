@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  
+  <title>Frontend Mentor | Contact form</title>
+
+<!--style file-->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="main-section">
+    <h2>Contact Us</h2>
+    <div class="first-name">
+    <p>First Name</p>
+  <input id="first-name-input" type="text" placeholder="first name" required>
+  <p id="error-first-name" class="error hidden">This field is required</p>
+    </div>
+    <div class="last-name">
+    <p>Last Name</p>
+    <input id="last-name-input" type="text" placeholder="last name" required>
+    <p id="error-last-name" class="error hidden">This field is required</p>
+    </div>
+    <div class="email">
+    <p>Email Address</p>
+    <input id="email-input" type="email" placeholder="email address" required>
+    <p id="error-email" class="error hidden">This field is required</p>
+    <p id="error-not-valid-email" class="error hidden">Please enter a valid email address</p>
+    </div>
+    <div class="list">
+  <p>Query Type</p>
+  <ul>
+    <li class="list-option option1"><input id="list-checkbox1" class="list-checkbox" type="radio" name="query-type" value="query-type" required>General Enquiry</li>
+    <li class="list-option option2"><input id="list-checkbox2" class="list-checkbox" type="radio" name="query-type" value="query-type" required>Support Request</li>
+  </ul>
+  <p id="error-list" class="error hidden">Please select a query type</p>
+    </div>
+    <div class="message">
+    <p>Message</p>
+    <textarea id="message-input"  required></textarea>
+    <p id="error-message" class="error hidden">This field is required</p>
+    </div>
+    <div class="consent">
+    <ul>
+      <li class="consent-option"><input id="consent-checkbox" type="checkbox" name="consent" value="consent" required>I consent to being contacted by the team</li>
+    </ul>
+    <p id="error-consent" class="error hidden">To submit this form, please consent to being contacted</p>
+    </div>
+    <div class="submit">
+    <button id="form-btn" type="submit">Submit</button>
+    
+    </div>
+  </section>
+  <div class="overlay hidden"></div>
+  <div id="success" class="success hidden">
+    <h2>Message Sent!</h2>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+    <button id="success-btn" type="submit">Close</button>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

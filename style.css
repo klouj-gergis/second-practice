@@ -1,0 +1,440 @@
+:root{
+    --comonGreen: hsl(169, 82%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --light-green: hsl(148, 38%, 91%);
+    --shadow: gray;
+    --red: red;
+    --darkerGreen: hsl(169, 90%, 20%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+    outline: transparent;
+    font-family: "Karla", sans-serif;
+}
+
+
+
+@media (max-width: 375px) {
+    body {
+        width: 375px;
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: var(--light-green);
+    }
+    section {
+        width: 330px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        background-color: var(--white);
+        padding-top: 15px;
+        box-shadow: 0 0 4px var(--shadow);
+        border-radius: 10px;
+    }
+
+    section > h2 {
+        display: inline-block;
+        font-size: 22px;
+        text-align: left;
+        margin-left: -195px;
+    }
+
+    div {
+        width: 90%;
+    }
+    
+
+    input {
+        width: 90%;
+        height: 45px;
+        padding-left: 10px;
+        font-size: 16px;
+        margin-top: 5px;
+        border-radius: 10px;
+        outline: none;        
+        color: var(--comonGreen);
+    }
+
+    input:focus , textarea:focus{
+        border: 2px solid var(--comonGreen);
+
+    }
+
+    .list-checkbox {
+        width: 15px;
+        margin-bottom: 3px;
+    }
+
+    .list-checkbox:checked{
+        accent-color: var(--comonGreen);
+    }
+
+    .list {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    li {
+        width: 90%;
+        height: 50px;
+        border: solid 1px var(--shadow);
+        border-radius: 10px;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-left: 10px;
+    }
+
+    .message {
+        width: 100%;
+        padding-left: 30px;
+        margin-top: 10px;
+    }
+
+    .message > textarea {
+        width: 84%;
+        height: 200px;
+        border-radius: 8px;
+        padding: 10px;
+        margin-top: 10px;
+        color: var(--comonGreen);
+    }
+
+    .consent {
+        width: 90%;
+        height: 50px;
+        padding-left: 40px;
+    }
+
+    .consent  input {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+
+    }
+
+    .consent input:checked {
+        accent-color: var(--comonGreen);
+    }
+
+    .consent li {
+        width: 250px;
+        padding-left: 10px;
+        line-height: 25px;
+        border: none;
+    }
+
+    .submit {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .submit button {
+        width: 100%;
+        height: 60px;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--comonGreen);
+        color: var(--white);
+        letter-spacing: 1px;
+    }
+    .error {
+        color: var(--red);
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .selected {
+        background-color: var(--light-green);
+        border-color: var(--comonGreen) ;
+    }
+
+    .success {
+        position: absolute;
+        width: 200px;
+        padding: 15px;
+        background-color: var(--white);
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border-radius: 10px;
+        box-shadow: 0 3px 5px var(--shadow);
+        z-index: 100;
+    }
+
+    .success button {
+        width: 100%;
+        height: 30px;
+        color: var(--white);
+        background-color: var(--comonGreen);
+        border-radius: 5px;
+        border: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        box-shadow: 0 3px 5px var(--shadow);
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--shadow);
+        opacity: 0.2;
+        z-index: 50;
+    }
+}
+
+@media (max-width: 1440px) and (min-width: 376px) {
+    body {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: var(--light-green);
+    }
+    section {
+        width: 45%;
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        background-color: var(--white);
+        padding: 10px;
+        padding-top: 15px;
+        box-shadow: 0 0 4px var(--shadow);
+        border-radius: 10px;
+    }
+
+    section > h2 {
+        display: block;
+        width: 100%;
+        font-size: 22px;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    div {
+        width: 100%;
+    }
+    
+
+    input {
+        width: 100%;
+        height: 45px;
+        padding-left: 10px;
+        font-size: 16px;
+        margin-top: 5px;
+        border-radius: 10px;
+        outline: none;
+        color: var(--comonGreen);
+    }
+
+    input:focus , textarea:focus{
+        border: 2px solid var(--comonGreen);
+    }
+
+    .list-checkbox {
+        width: 15px;
+        margin-bottom: 3px;
+    }
+
+    .list-checkbox:checked{
+        accent-color: var(--comonGreen);
+    }
+
+
+
+    .list {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul{
+        display: flex;
+        gap: 10px;
+    }
+
+    li {
+        width: 90%;
+        height: 50px;
+        border: solid 1px var(--shadow);
+        border-radius: 10px;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-left: 10px;
+    }
+
+    .message {
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    .message > textarea {
+        width: 90%;
+        height: 80px;
+        border-radius: 8px;
+        padding: 10px;
+        margin-top: 10px;
+        color: var(--comonGreen);
+    }
+
+    .consent {
+        width: 90%;
+        height: 50px;
+        padding-left: 40px;
+        margin-top: -20px;
+    }
+
+    .consent  input {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+
+    }
+
+    .consent input:checked {
+        accent-color: var(--comonGreen);
+    }
+
+
+    .consent li {
+        padding-left: 10px;
+        line-height: 25px;
+        border: none;
+    }
+
+    .submit {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .submit button {
+        width: 100%;
+        height: 60px;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--comonGreen);
+        color: var(--white);
+        letter-spacing: 1px;
+        transition-duration: 0.3s;
+    }
+
+    .submit button:hover {
+        background-color: var(--darkerGreen);
+        box-shadow: 2px 3px 5px var(--shadow);
+    }
+
+    .first-name {
+        width: 45%;
+        display: block;
+        margin-right: -4px;
+
+    }
+    .last-name input {
+        width: 94%;
+    }
+
+    .last-name {
+        width: 42.5%;
+
+        box-sizing: border-box;
+    }
+    .first-name input {
+        width: 94%;
+    }
+
+    .email {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .email input {
+        width: 98%;
+    }
+
+    .email p {
+        margin-right: 74.3%;
+    }
+
+    .option-checked {
+        border-color:  var(--comonGreen);
+        background-color: var(--light-green);
+    }
+
+    .error {
+        color: var(--red);
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .success {
+        position: absolute;
+        width: 300px;
+        height: fit-content;
+        background-color: var(--white);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border-radius: 10px;
+        margin-top: 100px;
+        box-shadow: 0 3px 5px var(--shadow);
+        z-index: 100;
+    }
+    .success button {
+        background-color: var(--comonGreen);
+        padding:5px 20px;
+        outline: transparent;
+        border: transparent;
+        border-radius: 5px ;
+        color: var(--white);
+        transition-duration: 0.3s;
+    }
+
+    .success button:hover {
+        background-color: var(--darkerGreen);
+        box-shadow: 0 3px 5px var(--shadow);
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--shadow);
+        opacity: 0.2;
+        z-index: 50;
+    }
+
+}
+
+.hide {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
